@@ -1,7 +1,7 @@
 div {
   /* Center the div both horizontally and vertically */
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -24,7 +24,39 @@ div:hover {
   transform: translate(-50%, -52%);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
-body{
+body {
   background-color: #1a1a1a;
-  
+}
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.img img {
+  width: 50%; /* Make image responsive */
+  max-width: 300px; /* Limit maximum width for larger screens */
+  height: 400px; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for better look */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .img img {
+    max-width: 90%; /* Adjust for smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .img img {
+    max-width: 60%; /* Adjust for tablet size */
+  }
+}
+
+@media (min-width: 1201px) {
+  .img img {
+    max-width: 300px; /* Fixed size for larger screens */
+  }
 }

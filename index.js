@@ -6,6 +6,8 @@ async function newQuote() {
     spech.innerText = data.data.content;
     const author = document.getElementById("author");
     author.innerText = data.data.author;
+    const img = document.querySelector('.img img');
+    img.src = `https://picsum.photos/200/300?random=${Math.random()}`;
 }
 
 function copy() {
@@ -22,3 +24,4 @@ function shareX() {
     window.open(twitterUrl, "_blank")
 
 }
+
