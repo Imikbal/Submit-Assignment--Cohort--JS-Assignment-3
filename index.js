@@ -1,7 +1,7 @@
 async function newQuote() {
     const quote = await fetch("https://api.freeapi.app/api/v1/public/quotes/quote/random");
     const data = await quote.json();
-    console.log(data)
+    
     const spech = document.getElementById("quote");
     spech.innerText = data.data.content;
     const author = document.getElementById("author");
